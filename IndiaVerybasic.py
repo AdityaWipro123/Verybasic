@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 
 # === Load the trained model ===
-model = joblib.load("./Verybasic.pkl")
+model = joblib.load("./VeryBasic.pkl")
 
 # === Define encoding mappings ===
 
