@@ -13,8 +13,7 @@ bearing_map = {'N': 0, 'Y': 1}
 
 # === Define input headers (must match training model) ===
 input_headers = [
-    "Pressure", "Bore", "Rod diameter", "Stroke", "Cushioning",
-    "BearingY-N"
+    "Pressure", "Bore", "Rod diameter", "Stroke","BearingY-N"
 ]
 
 st.set_page_config(page_title="Hydraulic Cost Estimator", layout="centered")
