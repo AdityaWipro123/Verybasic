@@ -9,10 +9,7 @@ model = joblib.load("./VeryBasic.pkl")
 # === Define encoding mappings ===
 
 bearing_map = {'N': 0, 'Y': 1}
-# cyltype_map = {
-#     'Arm': 0, 'Boom': 1, 'Bucket': 2, 'Dipper': 3, 'Lift': 4,
-#     'Other': 5, 'Stabilizer': 6, 'Steering': 7, 'Swing': 8, 'Tilt': 9
-# }
+
 
 # === Define input headers (must match training model) ===
 input_headers = [
@@ -49,8 +46,7 @@ bearing = st.selectbox("BearingY-N", options=list(bearing_map.keys()))
 if st.button("Predict Cost 💰"):
     # Prepare the input in the correct order and format
     input_data = pd.DataFrame([[
-        pressure, bore, rod_dia, stroke,
-        bearing_map[bearing]
+        pressure, bore, rod_dia, stroke,bearing_map[bearing]
     ]], columns=input_headers)
 
     # Predict
